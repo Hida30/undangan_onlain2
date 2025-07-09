@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="jv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Ria & Roni</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .aksara {
+      font-family: 'Great Vibes', cursive;
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .card-touch {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-touch:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card-touch:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-rose-50 via-white to-pink-100 text-gray-800">
+
+<!-- Halaman Selamat Datang -->
+<div id="welcome-page" class="fixed inset-0 z-50 flex flex-col items-center justify-center text-center overflow-hidden">
+  <video autoplay muted loop playsinline class="absolute w-full h-full object-cover">
+    <source src="video-sampul.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+  <div class="relative z-10 p-8 text-white animate-fade-in">
+    <h1 class="text-5xl font-bold aksara mb-4 drop-shadow-lg">Sugeng Rawuh</h1>
+    <p class="text-lg mb-6 drop-shadow-md">Dengan segala hormat, kulo aturi rawuh wonten ing pahargyan manten</p>
+    <h2 class="text-4xl font-bold mb-4 aksara">Ria & Roni</h2>
+    <button onclick="enterInvitation()" class="bg-white text-black font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300">Buka Undangan</button>
+  </div>
+</div>
+
+<!-- Musik -->
+<audio id="bg-music" src="https://dl.dropboxusercontent.com/scl/fi/j4i8eug0szcd27z8pwtau/Westlife_-_Beautiful_in_White.mp3?rlkey=2el1jmt6a84hrxqzjs75tr9ps&dl=0" autoplay loop hidden></audio>
+
+<!-- Sampul -->
+<section class="h-screen flex items-center justify-center relative overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="img/wayang.jpeg" class="w-full h-full object-cover" alt="Sampul Wayang">
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+  <div class="relative z-10 text-center text-white backdrop-blur-sm bg-black/30 p-6 rounded fade-in">
+    <h1 class="text-4xl font-bold aksara">Panganten</h1>
+    <p class="text-5xl mt-4 aksara">Ria & Roni</p>
+    <p class="mt-2 text-sm italic">Punika dinten kabegjanipun Ria kaliyan Roni</p>
+  </div>
+</section>
+
+<!-- Perkenalan Mempelai -->
+<section class="py-16 bg-pink-50 text-center">
+  <h3 class="text-3xl font-bold text-rose-700 mb-6">Perkenalan Mempelai</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <div class="bg-white rounded-lg p-6 shadow fade-in card-touch">
+      <img src="img/sepasang.jpeg" alt="Roni" class="w-32 h-32 mx-auto rounded-full border-4 border-rose-200 mb-4">
+      <h4 class="text-xl font-semibold">Roni Adi Pranoto</h4>
+      <p class="text-sm text-gray-500">Putra dari Bapak Suparman & Ibu Sulastri</p>
+      <p class="mt-2 text-sm italic">ꦱꦼꦭꦼꦩꦤ꧀, Yogyakarta</p>
+    </div>
+    <div class="bg-white rounded-lg p-6 shadow fade-in card-touch">
+      <img src="img/sepasang.jpeg" alt="Ria" class="w-32 h-32 mx-auto rounded-full border-4 border-rose-200 mb-4">
+      <h4 class="text-xl font-semibold">Ria Kusumawati</h4>
+      <p class="text-sm text-gray-500">Putri dari Bapak Sutrisno & Ibu Mulyani</p>
+      <p class="mt-2 text-sm italic">ꦧꦠꦸꦭ꧀, Yogyakarta</p>
+    </div>
+  </div>
+</section>
+
+<!-- Detail Acara -->
+<section class="relative py-20 px-6 bg-gradient-to-b from-pink-100 to-white text-center">
+  <div class="max-w-3xl mx-auto">
+    <h3 class="text-3xl font-bold text-amber-800 mb-4 animate-fade-in">Akad & Resepsi</h3>
+    <p class="mb-2 text-lg animate-fade-in">Hari Rabu, 17 April 2024</p>
+    <p class="mb-2 text-lg animate-fade-in">Pukul 10.00 WIB sampai selesai</p>
+    <p class="mb-4 text-lg animate-fade-in">
+      <a href="https://maps.app.goo.gl/VsVGDKdbHQDKPtb28" target="_blank" class="text-blue-600 underline hover:text-blue-800">
+        Masjid Sholeh, Prambanan
+      </a>
+    </p>
+    <p class="text-sm text-gray-500 animate-fade-in italic">Mugi rawuhipun panjenengan ndadosaken berkah tumrap manten kakung saha manten putri.</p>
+    <div class="mt-10 animate-fade-in">
+      <h4 class="text-lg font-semibold mb-3">Denah Lokasi</h4>
+      <img src="img/lokasi.jpeg" alt="Denah Lokasi" class="w-64 mx-auto rounded-lg border shadow-md">
+    </div>
+  </div>
+</section>
+
+<!-- Galeri Foto -->
+<section class="py-16 bg-white text-center">
+  <h3 class="text-3xl font-bold text-gray-700 mb-6">Galeri Kenangan</h3>
+  <p class="text-sm text-gray-500 mb-8">Momen-momen penuh makna yang menjadi bagian dari kisah kami</p>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
+    <img src="galeri1.jpg" class="rounded shadow card-touch">
+    <img src="galeri2.jpg" class="rounded shadow card-touch">
+    <img src="galeri3.jpg" class="rounded shadow card-touch">
+    <img src="galeri4.jpg" class="rounded shadow card-touch">
+  </div>
+</section>
+
+<!-- RSVP Form -->
+<section class="py-16 bg-gray-100 text-center">
+  <h3 class="text-2xl font-bold mb-4">Konfirmasi Kehadiran</h3>
+  <p class="text-sm text-gray-500 mb-6">Dengan hormat, mohon kesediaan Panjenengan kagem konfirmasi rawuh</p>
+  <form class="max-w-md mx-auto text-left bg-white p-6 rounded shadow" onsubmit="sendToWhatsApp(event)">
+    <label class="block mb-2 font-semibold">Nama</label>
+    <input type="text" id="nama" class="w-full p-2 mb-4 border rounded" placeholder="Nama Lengkap" required>
+
+    <label class="block mb-2 font-semibold">Jumlah Tamu</label>
+    <input type="number" id="jumlah" class="w-full p-2 mb-4 border rounded" min="1" placeholder="Jumlah Tamu" required>
+
+    <label class="block mb-2 font-semibold">Ucapan / Doa</label>
+    <textarea id="pesan" class="w-full p-2 mb-4 border rounded" placeholder="Ucapan dan doa restu"></textarea>
+
+    <button type="submit" class="bg-rose-600 text-white py-2 px-4 rounded hover:bg-rose-700">Kirim via WhatsApp</button>
+  </form>
+</section>
+
+<!-- WhatsApp Script -->
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+    const nama = document.getElementById('nama').value;
+    const jumlah = document.getElementById('jumlah').value;
+    const pesan = document.getElementById('pesan').value;
+    const nomor = '6281354818605';
+    const text = `Assalamu'alaikum.%0ASaya ${encodeURIComponent(nama)} akan hadir bersama ${jumlah} tamu.%0AUcapan/Doa: ${encodeURIComponent(pesan)}`;
+    window.open(`https://wa.me/${nomor}?text=${text}`, '_blank');
+  }
+</script>
+
+<!-- Footer -->
+<footer class="text-center py-6 text-sm text-gray-500">
+  © 2024 Ria & Roni. Matur nuwun sanget kagem panggalih, pangestunipun saha donga restu Panjenengan.
+</footer>
+
+<!-- Script Musik -->
+<script>
+  document.addEventListener('click', () => {
+    const audio = document.getElementById('bg-music');
+    if (audio.paused) {
+      audio.play();
+    }
+  });
+
+  function enterInvitation() {
+    document.getElementById('welcome-page').style.display = 'none';
+    const audio = document.getElementById('bg-music');
+    if (audio.paused) {
+      audio.play();
+    }
+  }
+</script>
+
+</body>
+</html>
